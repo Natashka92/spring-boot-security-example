@@ -1,14 +1,38 @@
 package simple.java.spring.example.rest;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+@Controller
 public class HelloController {
 
-    @RequestMapping("/")
-    public String index() {
-        return "Greetings from Spring Boot!";
+    @GetMapping("/")
+    public String home1() {
+        return "/home";
     }
 
+    @GetMapping("/home")
+    public String home() {
+        return "/home";
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "/admin";
+    }
+
+    @GetMapping("/user")
+    public String user() {
+        return "/user";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "/login";
+    }
+
+    @GetMapping("/403")
+    public String error403() {
+        return "/error/403";
+    }
 }
