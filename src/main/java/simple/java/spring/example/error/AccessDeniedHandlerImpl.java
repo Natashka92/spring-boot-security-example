@@ -27,7 +27,7 @@ public class AccessDeniedHandlerImpl implements AccessDeniedHandler {
                 .getAuthentication();
 
         if (auth != null) {
-            logger.info("User '" + auth.getName() + "' attempted to access the protected URL: "
+            logger.info("UserProfile '" + auth.getName() + "' attempted to access the protected URL: "
                     + httpServletRequest.getRequestURI());
         }
 
